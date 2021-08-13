@@ -9,7 +9,6 @@ Instruction pour l'utiliser :
   -  Installer chromedriver [lien](https://chromedriver.chromium.org/downloads) 
   -  Mettre à jour les differents chemin d'accès dans le fichier ```tokens.py```
       -  ligne 67 : mettre le chemin d'accès de ```chromdriver``` 
-      -  
   -  créer un fichier ```log.json``` qui va avoir cette structure (dans le même répertoire que ```tokens.py```):
     
     {
