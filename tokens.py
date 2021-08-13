@@ -1,11 +1,15 @@
+# module pour pouvoir utiliser selenium
 from selenium import webdriver 
 from selenium.webdriver.common.keys import Keys
 from selenium.common.exceptions import NoSuchElementException
 from selenium.webdriver.chrome.options import Options
+# module pour faire du scraping 
 from bs4 import BeautifulSoup
-import json,time,clipboard,random, os
-from pathlib import Path # module pour obtenir le chemin 
-#from datetime import date, timedelta
+
+import json,time,random, os
+# module pour obtenir le chemin 
+from pathlib import Path 
+# module pour gérer les dates
 import datetime
 
 # fonction pour vérifier si un fichier token.txt (avec un token valide)
@@ -62,16 +66,15 @@ def login(driver,email,mdp):
 def get_token():
     # initialisation du webdriver 
     chrome_options = Options()
-    chrome_options.add_argument("--headless")
+    chrome_options.add_argument("--headless") # on lance le programme sans afficher la fenêtre 
 
-    driver = webdriver.Chrome(executable_path="Path/to/webdriver",options=chrome_options)
+    driver = webdriver.Chrome(executable_path="Path/to/your/chromedriver",options=chrome_options)
 
     #url pour se connecter à github et créer des tokens 
     url = "https://github.com/settings/apps"
     driver.get(url)
 
-    email,mdp,username = get_id()
-    #login(driver,email,mdp)    
+    email,mdp,username = get_id()   
 
     # équivalent pour se connecter
     driver.find_element_by_id('login_field').send_keys(email)
@@ -99,7 +102,7 @@ def get_token():
     token_url = "https://github.com/settings/tokens/new"
     driver.get(token_url)
 
-    driver.find_element_by_id('oauth_access_description').send_keys("Automatisation-"+str(random.randint(0,100)))
+    driver.find_element_by_id('oauth_access_description').send_keys("Automatisation-"+str(random.randint(0,100))) # on rajoute un numéro random au cas où, pour ne pas avoir le même nom pour 2 tokens (ce qui est impossible)
     driver.find_element_by_xpath('//*[@id="new_oauth_access"]/div/dl[2]/dd/div/ul/li[1]/label/div/input').click()
     driver.find_element_by_xpath('//*[@id="new_oauth_access"]/p/button').click()
     
