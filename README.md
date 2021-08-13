@@ -8,7 +8,9 @@ Instruction pour l'utiliser :
   - Taper la commande  ```pip install -r requirements.txt``` pour installer les modules nécessaires
   -  Installer chromedriver [lien](https://chromedriver.chromium.org/downloads) 
   -  Mettre à jour les differents chemin d'accès dans le fichier ```tokens.py```
-  -  créer un fichier log.json qui va avoir cette structure (dans le même répertoire que tokens.py):
+      -  ligne 67 : mettre le chemin d'accès de ```chromdriver``` 
+      -  
+  -  créer un fichier ```log.json``` qui va avoir cette structure (dans le même répertoire que ```tokens.py```):
     
     {
         "email":"adresse mail",
