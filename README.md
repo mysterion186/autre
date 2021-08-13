@@ -8,11 +8,11 @@ Instruction pour l'utiliser :
   - Taper la commande  ```pip install -r requirements.txt``` pour installer les modules nécessaires
   -  Installer chromedriver [lien](https://chromedriver.chromium.org/downloads) 
   -  Mettre à jour les differentes valeurs dans le fichier sous forme de string 
-  -  créer un fichier log.json qui va avoir cette structure :
+  -  créer un fichier log.json qui va avoir cette structure (au niveau du fichier tokens.py):
     
     {
         "email":"adresse mail",
         "password" : "mot de passe github",
         "username":"nom d'utilisateur github"
     }
-  - Mettre le fichier ```github.sh``` dans le PATH de votre ordinateur en lui donnant les droit d'exécution
+  - Mettre le fichier ```github.sh``` dans le PATH de votre ordinateur en lui donnant les droits d'exécution
