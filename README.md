@@ -8,7 +8,8 @@ Instruction pour l'utiliser :
   -  Installer chromedriver [lien](https://chromedriver.chromium.org/downloads) 
   -  Mettre à jour les differents chemin d'accès dans les fichiers :
       -  ligne 67 du fichier ```tokens.py``` : mettre le chemin d'accès de ```chromedriver``` 
-      -  ligne 17 du fichier ```github.sh``` : mettre son nom d'utilisateur dans l'adresse url
+      -  ligne 4 du fichier ```github.sh``` : mettre le chemin abslolue du fichier ```tokens.py```
+      -  ligne 18 du fichier ```github.sh``` : mettre son nom d'utilisateur dans l'adresse url
   -  créer un fichier ```log.json``` qui va avoir cette structure (dans le même répertoire que ```tokens.py```):
     
     {
