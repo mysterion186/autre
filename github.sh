@@ -9,8 +9,8 @@ echo "$my_var"
 curl -H "Authorization: token "$my_var" " --data '{"name":"'$mydir'","private":'$1'}' https://api.github.com/user/repos
 touch .gitignore
 touch readme.md
-echo .DS_Store > .gitignore
-echo \#"($mydir)" > readme.md
+echo .DS_Store >> .gitignore
+echo \#"($mydir)" >> readme.md
 git init
 git add readme.md
 git commit -m "first commit"
