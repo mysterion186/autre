@@ -12,13 +12,14 @@ else
 	mydir="$2"
 fi
 echo "$my_var"
+
 curl -H "Authorization: token "$my_var" " --data '{"name":"'$mydir'","private":'$1'}' https://api.github.com/user/repos
-touch .gitignore
-echo \# "$mydir" >> readme.md
 git init
-touch readme.md
-git add readme.md
+touch README.md
+touch .gitignore
+echo \# "$mydir" >> README.md
 echo .DS_Store >> .gitignore
+git add README.md
 git commit -m "first commit"
 git branch -M main
 git remote add origin https://github.com/mysterion186/"$mydir".git
