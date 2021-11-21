@@ -19,3 +19,6 @@ Instruction pour l'utiliser :
         "username":"nom d'utilisateur github"
     }
   - Mettre le fichier ```github.sh``` dans le PATH de votre ordinateur en lui donnant les droits d'exécution
+
+  Après avoir fait les modifications d'au-dessus, pour pouvoir exécuter le programme il faut taper la commande : 
+  ```github repo_statuts [nom_du_repo]```où  ```repos_statut```est le statut public/privé du repo ```[nom_du_repo]```est facultatif
